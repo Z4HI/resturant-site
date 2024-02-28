@@ -159,6 +159,7 @@ header{
     justify-content: space-around;
     padding: 10px;
     height: 10dvh;
+    position: absolute;
 }
 
 .navbar :nth-child(n){
@@ -170,8 +171,8 @@ header{
     border-bottom: solid 2px ;
     transition: 0.5s ease;
     font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
+    font-weight: 200;
+    font-style: italic;
   
 }
 
@@ -229,14 +230,42 @@ header{
     color: #FFFFFF;
     text-shadow: 0 0 10px #FFFFFF;
 }
-.app h4{
+.menu{
+    backdrop-filter: blur(5px);
+    height: 400px;
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 70px;
+    transform: translateY(40px);
     
 }
-.app ul{
-    width: 200px;
-    list-style: none;
+
+#menutitle{
+
+    margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    
+}
+
+.menuContainer{
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+}
+
+.menuContainer h4{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.menuContainer p{
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
