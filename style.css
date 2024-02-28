@@ -10,7 +10,7 @@
 
 body{
     height: 100dvh;
-   
+    overflow: hidden;
     
 }
 
@@ -22,7 +22,8 @@ body{
     background-position: center;
     background-size:cover;
     position: absolute;
-    animation: zoom 10s ease-in alternate infinite;
+    animation: zoom 12s ease-in alternate infinite;
+    
 }
 
 
@@ -184,6 +185,7 @@ header{
 
 .app{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80dvh;
@@ -199,7 +201,7 @@ header{
     text-align: center;
     width: 500px;
     font-size: 60px;
-    backdrop-filter: blur(2px);
+    
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -226,4 +228,15 @@ header{
     border: red solid 1px;
     color: #FFFFFF;
     text-shadow: 0 0 10px #FFFFFF;
+}
+.app h4{
+    
+}
+.app ul{
+    width: 200px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
 }
