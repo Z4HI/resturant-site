@@ -8,10 +8,17 @@
     padding: 0;
 }
 
-body{
+html,body{
     height: 100dvh;
     overflow: hidden;
-    
+    max-width: 100%;
+}
+
+
+.sitewrappera{
+    position: fixed;
+    overflow-x: hidden;
+
 }
 
 .bg{
@@ -21,9 +28,9 @@ body{
     background-image: url(./images/Wagyu-scaled.jpeg);
     background-position: center;
     background-size:cover;
-    position: absolute;
+    position: fixed;
     animation: zoom 12s ease-in alternate infinite;
-    
+    overflow: hidden;
 }
 
 
@@ -51,6 +58,12 @@ body{
     
 }
 
+#meatgif{
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+}
+
 .circle{
     width: 15rem;
     height: 15rem;
@@ -68,11 +81,13 @@ body{
 
 }
 
-p{
+.ploader{
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 20px;
+    font-size: 15px;
+    transform: translateY(70px);
+    z-index: 10;
 }
 
 .tint{
@@ -164,7 +179,6 @@ header{
 
 .navbar :nth-child(n){
     color: white;
-    outline: none;
     border: none;
     width: 100px;
     background: none;
@@ -189,9 +203,10 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80dvh;
+    height: 90dvh;
     margin: 0px;
     color: white;
+    
 }
 
 .feature{
@@ -202,13 +217,12 @@ header{
     text-align: center;
     width: 500px;
     font-size: 60px;
-    
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
     line-height: 70px;
-    
-    
+    opacity: 0;
+    animation: fade 2s ease forwards;
 }
 .reserveBtn{
     display: block;
@@ -230,6 +244,8 @@ header{
     color: #FFFFFF;
     text-shadow: 0 0 10px #FFFFFF;
 }
+
+
 .menu{
     backdrop-filter: blur(5px);
     height: 400px;
@@ -237,8 +253,8 @@ header{
     text-align: center;
     padding: 10px;
     border-radius: 70px;
-    transform: translateY(40px);
-    
+    opacity: 0;
+    animation: fade 2s ease forwards;
 }
 
 #menutitle{
@@ -268,4 +284,220 @@ header{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: italic;
+}
+.aboutusHeading{
+ 
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.aboutus{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(7px);
+    height: 450px;
+    width: 500px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    border-radius: 30px;
+    opacity: 0;
+    animation: fade 2s ease forwards;
+    font-size: 14px;
+}
+
+.aboutusContent{
+    line-height: 1.5;
+}
+
+.reviewpage{
+    margin-top: 100px;
+    text-align: center;
+    padding: 10px;
+    height: 450px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 0;
+    animation: fade 2s ease forwards;
+    border: solid white 4px;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0;
+    animation: fade 2s ease forwards;
+}
+
+.reviewpage h4{
+    color: black;
+    font-size: 20px;
+}
+
+.reviewpage input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    outline: solid black 3px;
+    color: black;
+    padding: 9px;
+}
+
+.reviewpage input.valid{
+    outline: solid green 3px;
+}
+
+.error{
+    outline: solid red 3px;
+}
+
+.reviewpage label{
+    display: inline-block;
+    transform: translateX(-100px);
+    color: BLACK;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.reviewpage p{
+    margin-top: 10px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}   
+.reviewpage textarea{
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 6px;
+    background: none;
+    color: black;
+    outline: solid black 3px;
+}
+
+.reviewpage button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+    font-size: 16px;
+    border: solid white 2px;
+    margin-top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+.submitted{
+    position: absolute;
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fade 2s ease forwards;
+}
+.circle2{
+
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+}
+
+i{
+    position: absolute;
+    font-size: 70px;
+}
+
+.reviewSent{
+    position: absolute;
+    left: auto;
+    margin-top: 150px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 30px;
+}
+
+
+@keyframes fade {
+
+    100%{
+        opacity: 1;
+    }
+    
+}
+.contactus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactus p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 12px;
+}
+
+#map{
+    margin: 10px;
+    height: 300px;
+    width: 500px;
+    border-radius: 20px; 
+    opacity: 0;
+    animation: fade 2s ease forwards;
+}
+
+
+@media screen and (max-width:500px) {
+
+    .feature{
+        width: 300px;
+        font-size: 40px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .menuContainer{
+        width: 400px;
+    }
+    .aboutus{
+        width: 300px;
+    }
+
+    #headerlogo{
+        margin-left: 30px;
+        
+    }
+
+    #map{
+        width: 300px;
+    }
+    
 }
